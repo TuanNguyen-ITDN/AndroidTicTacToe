@@ -98,6 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
     void checkWin() {
         kiemTraX(bt1, bt2, bt3);
+        kiemTraX(bt1, bt4, bt7);
+        kiemTraX(bt1, bt5, bt9);
     }
 
     void kiemTraX(Button btn1, Button btn2, Button btn3) {
