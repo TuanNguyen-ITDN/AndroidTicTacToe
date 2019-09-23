@@ -97,14 +97,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void checkWin() {
-        kiemTraX(bt1, bt2, bt3);
-        kiemTraX(bt1, bt4, bt7);
-        kiemTraX(bt1, bt5, bt9);
+        kiemTraX(bt1, bt2, bt3, "X");
+        kiemTraX(bt1, bt4, bt7, "X");
+        kiemTraX(bt1, bt5, bt9, "X");
+        kiemTraX(bt4, bt5, bt6, "X");
+        kiemTraX(bt7, bt8, bt9, "X");
+        kiemTraX(bt2, bt5, bt8, "X");
+        kiemTraX(bt3, bt6, bt9, "X");
+        kiemTraX(bt3, bt5, bt7, "X");
+
     }
 
-    void kiemTraX(Button btn1, Button btn2, Button btn3) {
-        if (btn1.getText().equals("X") && btn2.getText().equals("X") && btn3.getText().equals("X")) {
+    void kiemTraX(Button btn1, Button btn2, Button btn3, String X) {
+        if (btn1.getText().equals(X) && btn2.getText().equals(X) && btn3.getText().equals(X)) {
             Toast.makeText(this, "X win", Toast.LENGTH_SHORT).show();
+            reset();
         }
+
+    }
+
+    void reset() {
+        bt1.setText("");
+        bt2.setText("");
+        bt3.setText("");
+        bt4.setText("");
+        bt5.setText("");
+        bt6.setText("");
+        bt7.setText("");
+        bt8.setText("");
+        bt9.setText("");
+        count = 0;
     }
 }
